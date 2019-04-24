@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Google Fonts NotoSansJapanese CSS -->
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+    <title>SparkApp</title>
+</head>
+<body>
+
+<div class="port-header">
+    <p class="port-title">B5研究室参考リンク集</p>
+    <div class="port-description">
+        <p>参考になるリンクを載せる</p>
+    </div>
+</div>
+
+<form class="search-box" action="#" method="post">
+    <input type="search" name="search" placeholder="キーワードを入力">
+    <input type="submit" name="submit" value="検索">
+</form>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <a class="btn btn-primary" href="#">福見班</a>
+        <a class="btn btn-secondary" href="#" >桃代班</a>
+        <a class="btn btn-info" href="#">伸一班</a>
+        <a class="btn btn-warning" href="#">国際学会</a>
+        <a class="btn btn-dark" href="#">その他</a>
+    </div>
+</div>
+
+<div class="container-fruid port-content port-item2">
+    <h3 class="port-content-title">Theme2</h3>
+    <div class="row" th:each="link : ${links}">
+        <div class="col-md card">
+            <a th:href="${link.value.url}">
+                <h3 class="card-title" th:text="${link.value.name}"></h3>
+                <div class="card-body" th:text="${link.value.description}"></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
