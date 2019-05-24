@@ -5,7 +5,8 @@ import java.util.concurrent.atomic.AtomicInteger
 class LinkDao {
     val links = hashMapOf(
             0 to Link(0, "いらっしゃい", "https://sites.google.com/view/fukumi-lab/fukumis-home", 1, "学会リンクなどが載ってます．"),
-            1 to Link(1, "実験予定表", "https://docs.google.com/spreadsheets/d/1BsVyCpxU71IeF6bYF8b2qUadaqdDpfjBMaOGGyY6xMw/edit#gid=0", 2, "予定表．"),
+//            1 to Link(1, "実験予定表", "https://docs.google.com/spreadsheets/d/1BsVyCpxU71IeF6bYF8b2qUadaqdDpfjBMaOGGyY6xMw/edit#gid=0", 2, "予定表．"),
+            1 to Link(1, "実験予定表", "#", 2, "予定表．"),
             2 to Link(2, "Github", "https://github.com/", 5, "バージョン管理ツール"),
             3 to Link(3, "福見班テスト", "#", 1, "fukumi-test"),
             4 to Link(4, "桃代班テスト", "#", 2, "momoyo-test"),

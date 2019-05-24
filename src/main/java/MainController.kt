@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
     val linkDao = LinkDao()
 
     // Top
-    path("index"){
+    path("index") {
         val model = HashMap<String, Any?>()
         get("") { req, res ->
 
