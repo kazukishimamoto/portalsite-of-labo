@@ -30,7 +30,9 @@
 ### Gitブランチの運用
 
 masterブランチ:常に完全な品質を保証する状態．直接のコミットは基本しない．
+
 Developブランチ:開発用のブランチ．ここからfeat，fix，refactorなどのブランチに派生する．
+
 コミットメッセージには，プレフィックスをつけることを推奨する．
 
 参考:https://qiita.com/numanomanu/items/45dd285b286a1f7280ed
