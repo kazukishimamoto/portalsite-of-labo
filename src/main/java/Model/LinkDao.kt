@@ -12,7 +12,8 @@ class LinkDao {
             4 to Link(4, "桃代班テスト", "#", 2, "momoyo-test"),
             5 to Link(5, "伸一テスト", "#", 3, "shin-ichi-test"),
             6 to Link(6, "国際学会情報", "#", 4, "kokusai-test"),
-            7 to Link(7, "その他テスト", "#", 5, "sonota-test")
+//            7 to Link(7, "その他テスト", "#", 5, "sonota-test")
+            7 to Link(7, "その他テスト", "http://localhost:4567/user_information", 5, "sonota-test")
     )
 
     val lastId: AtomicInteger = AtomicInteger(links.size - 1)

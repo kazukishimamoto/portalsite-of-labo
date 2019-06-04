@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link th:href="@{/static/css/app.css}" rel="stylesheet"/>
+</head>
+<body>
+<h1>ユーザー</h1>
+<ul th:unless="${user_information.isEmpty()}">
+<!--    <li th:each="user: ${user_information}">-->
+<!--        <span th:text="${user.id}"></span>-->
+<!--        <span th:text="${user.name}"></span>-->
+<!--        <span th:text="${user.url}"></span>-->
+<!--    </li>-->
+</ul>
+</body>
+
+</html>

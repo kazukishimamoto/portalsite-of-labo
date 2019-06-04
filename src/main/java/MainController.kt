@@ -7,12 +7,22 @@ import spark.Request
 import spark.Spark
 import spark.template.thymeleaf.ThymeleafTemplateEngine
 import java.util.HashMap
+import ModelTest.User
+import Test.*
 
 fun main(args: Array<String>) {
-    Spark.staticFileLocation("/public");
+    Spark.staticFileLocation("/public")
 
     val userDao = UserDao()
     val linkDao = LinkDao()
+
+    val userDomaEntity = UserDomaEntity()
+    val userDomaDao: UserDomaDao
+    val userRepository: UserRepository
+    val userRepositoryDomaImpl: UserRepositoryDomaImpl
+    val userController: UserController
+    val user: User
+    val homeController = HomeController()
 
     // Top
     path("index") {
@@ -28,6 +38,10 @@ fun main(args: Array<String>) {
         get("/:tag") { req, res ->
             linkDao.findByAllTag(req.params("tag").toInt())
         }
+    }
+
+    path("/user_information") {
+
     }
 
     // Creating a Spark/Kotlin CRUD micro service
@@ -65,7 +79,6 @@ fun main(args: Array<String>) {
             userDao.delete(req.params("id").toInt())
             "ok"
         }
-
     }
 
 }
